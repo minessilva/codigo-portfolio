@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'TradeGothicLT-Bold';
+  src: url('fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('fonts/ApercuPro/ApercuPro.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu-Bold';
+  src: url('Apercu-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+li, a {
+    color: #000000;
+    text-indent: -15px;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+}
+a:focus {
+    color: #000000;
+    font-weight: 700;
+    transition: .2s linear;
+}
+
+h1 {
+    line-height: 0;
+    font-size: 4vw;
+    font-weight: 700;
+}
+h3 {
+    float: right;
+    line-height: .3;
+    font-size: 2.5vw;
+    font-weight: lighter;
+}
+h4 {
+    float: left;
+    margin-left: -2%;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'TradeGothicLT-Bold';
+}
+
+#menu, label:before, label:after {
+    content: "mis";
+    position: absolute;
+    left: 100px;
+    width: 40px;
+    height: 5px;
+    background-color: #f04319; 
+/*    //onde se muda a cor do meu e do x//*/
+    border-radius: 2px;
+    transition: .5s ease;
+}
+
+label {
+    padding: 38px 70px;
+    position: absolute;
+    z-index: 2;
+}
+label:before { top: 50px; }
+label:after { top: 70px; }
+
+#menu {
+    top: 44px;
+    width: 0px;
+    transition: .2s ease;
+    z-index: 2;
+}
+#menu li {
+    line-height: 0.5;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#menu-toggle:checked + label:before {
+    top: 60px;
+    left: 50px;
+    transform: rotate(-45deg);
+}
+#menu-toggle:checked + label:after {
+    top: 60px;
+    left: 50px;
+    transform: rotate(45deg);
+}
+#menu-toggle:checked + label + #menu {
+    top: 44px;
+    width: 160px;
+    height: 145px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: .3s ease .2s;
+    z-index: 1;
+}
+#menu-toggle:checked + label + #menu li {
+    pointer-events: all;
+    font-family: 'TradeGothicLT-Bold';
+    line-height: 2.3;
+    opacity: 1;
+    z-index: 2;
+    transition: .2s ease .3s;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+
+/*<<<<<<<<HEADER<<<<*/
+    
+.home_button, .home_button:hover,
+.home_button:active  {
+  background-image: url(img/logo-black.svg);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;  /* Or whatever */
+    height: 5%; /* Or whatever */
+    padding: 5px;
+    margin-left: 75%;
+    margin-top: 50px;
+    position: absolute;
+    
+}
+
+/*<<<<<<<<HEADER<<<<*/
+
+ .contact {
+        width: 50%;
+        height: 60%;
+        background-image: url(img/contact_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        position: absolute;
+        margin-left: 25%;
+        padding: 5px;
+        margin-top: 150px;
+/*        background-color: aqua;*/
+    }
+/*
+.contact:hover,
+.contact:active  {
+        width: 25%;
+        height: 60%;
+        background-image: url(img/contact_1.jpg);
+    }
+*/
+
+.nome {
+    color: #000000;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    position: absolute;
+    width:180px;
+    margin-left: 10%;
+    margin-top: 350px;
+
+}
+
+.email {
+    color: #000000;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    position: absolute;
+    width:180px;
+    margin-left: 10%;
+    margin-top: 780px;
+
+}
+
+
+/* <<<<<<<<<<<<footer<<<*/
+
+.social-container {
+  display: flex; /* or inline-flex */
+  width: 20%;
+  height: 30px;
+  margin-top: 650px;
+  left: 40%;
+  position: absolute;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  padding: 10px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  
+}
+
+.behance_button {
+    
+ width: 160%;  /* Or whatever */
+  min-height: 100%;
+  background-image: url(img/behance_color.png);
+  padding: 5px;
+  margin-top: 9px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.behance_button:hover,
+.behance_button:active {
+    background-image: url(img/behance_color.png);
+    
+}
+
+
+
+  
+.insta_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/insta_4.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.insta_button:hover,
+.insta_button:active {
+    background-image: url(img/insta_4.png);
+    
+}
+
+
+.linked_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/in.png);
+  padding: 5px;
+  margin-top: 6px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.linked_button:hover,
+.linked_button:active {
+    background-image: url(img/in.png);
+    
+}
+
+.vimeo_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/vimeo_color.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.vimeo_button:hover,
+.vimeo_button:active {
+    background-image: url(img/vimeo_color.png);
+    
+}

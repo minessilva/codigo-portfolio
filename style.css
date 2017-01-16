@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'TradeGothicLT-Bold';
+  src: url('fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('fonts/ApercuPro/ApercuPro.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+
+body {
+    margin:0px;
+    padding:0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #FF0800;
+}
+
+video#videobg { 
+position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+/*    min-height: 100%;*/
+    width: 100%;
+/*    width: auto;*/
+/*    height: auto;*/
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+/*<<<<<<<<HEADER<<<<*/
+    
+.menu-container {
+  width: 20%;
+  height: 40px;
+  margin-left: 4%;
+  margin-top: 3%;
+  justify-content: flex-start;
+  padding: 10px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: block;
+  
+  
+}
+
+
+.home_button, .home_button:hover,
+.home_button:active  {
+  background-image: url(img/logo.svg);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;  /* Or whatever */
+  height: 100%; /* Or whatever */
+/*background-color: #1821ff;  */
+  padding: 5px;
+  
+    
+}
+
+/*<<<<<<<<WORKSPACE<<<<*/
+
+.workspace-container {
+  width: 80%;
+  height: 700px;
+  margin-left: 8%;
+  margin-top: 80%;
+  background-position: center;
+  padding: 10px;
+  list-style: none;
+    background-image: url(img/final_contorno.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+  
+}
+
+
+.digital {
+  width: 30%;  /* Or whatever */
+  height: 230px; /* Or whatever */ 
+  padding: 5px;
+  margin-left: 360px;
+  margin-top: 110px;
+  position:absolute;
+    
+}
+
+.digital:hover,
+.digital:active  {
+  background-image: url(img/digital.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.illustration {
+  width: 25%;  
+  height: 150px; 
+  padding: 5px;
+  margin-left: 630px;
+  margin-top: 235px;
+  position:absolute;
+    
+}
+
+.illustration:hover,
+.illustration:active  {
+  background-image: url(img/illustration.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.editorial {
+  width: 40%;  
+  height: 190px; 
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 240px;
+  position:absolute;
+    
+}
+
+.editorial:hover,
+.editorial:active  {
+  background-image: url(img/editorial.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.photo {
+  width: 40%;  
+  height: 380px; 
+  padding: 5px;
+  margin-left: 645px;
+  margin-top: 325px;
+  position:absolute;
+}
+
+.photo:hover,
+.photo:active  {
+  background-image: url(img/fotografia.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+.miscellaneous {
+  width: 20%;  
+  height: 150px; 
+  padding: 5px;
+  margin-left: 380px;
+  margin-top: 345px;
+  position:absolute;
+
+}
+
+.miscellaneous:hover,
+.miscellaneous:active  {
+
+  background-image: url(img/varios.png);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+
+
+
+}
+
+
+
+
+
+/* <<<<<<<<<<<<footer<<<*/
+
+.social-container {
+  display: flex; /* or inline-flex */
+  background-color: #ffffff;
+  width: 20%;
+  height: 30px;
+  top: 2%;
+  left: 40%;
+  position: relative;
+/*  transform: translate(-50%, -50%);*/
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 10px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  
+}
+
+.behance_button {
+    
+ width: 100%;  /* Or whatever */
+  min-height: 4px;
+  background-image: url(img/behance_color.png);
+  padding: 5px;
+  margin-top: 9px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.behance_button:hover,
+.behance_button:active {
+    background-image: url(img/insta_hover.svg);
+    
+}
+
+
+
+  
+.insta_button {
+    
+  width: 80%;  /* Or whatever */
+  min-height: 10px; /* Or whatever */
+  background-image: url(img/insta_4.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.insta_button:hover,
+.insta_button:active {
+    background-image: url(img/insta_hover.svg);
+    
+}
+
+
+.linked_button {
+    
+  width: 70%;  /* Or whatever */
+  min-height: 7px; /* Or whatever */
+  background-image: url(img/in.png);
+  padding: 5px;
+  margin-top: 6px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.linked_button:hover,
+.linked_button:active {
+    background-image: url(img/insta_hover.svg);
+    
+}
+
+.vimeo_button {
+    
+  width: 80%;  /* Or whatever */
+  min-height: 5px; /* Or whatever */
+  background-image: url(img/vimeo_color.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.vimeo_button:hover,
+.vimeo_button:active {
+    background-image: url(img/insta_hover.svg);
+    
+}
+
+
+
+
+
+@media screen and (max-width: 25em) {
+
+	.codeconvey-icon span {
+		display: none;
+	}
+    
