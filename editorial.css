@@ -1,0 +1,520 @@
+@font-face {
+  font-family: 'TradeGothicLT-Bold';
+  src: url('fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ApercuPro';
+  src: url('fonts/ApercuPro/ApercuPro.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu-Bold';
+  src: url('Apercu-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+li, a {
+    color: #000000;
+    text-indent: -15px;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+}
+a:focus {
+    color: #000000;
+    font-weight: 700;
+    transition: .2s linear;
+}
+
+h1 {
+    line-height: 0;
+    font-size: 4vw;
+    font-weight: 700;
+}
+h3 {
+    float: right;
+    line-height: .3;
+    font-size: 2.5vw;
+    font-weight: lighter;
+}
+h4 {
+    float: left;
+    margin-left: -2%;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'TradeGothicLT-Bold';
+}
+
+#menu, label:before, label:after {
+    content: "mis";
+    position: absolute;
+    left: 100px;
+    width: 40px;
+    height: 5px;
+    background-color: #f04319; 
+/*    //onde se muda a cor do menu e do x//*/
+    border-radius: 2px;
+    transition: .5s ease;
+    position: fixed;
+}
+
+label {
+    padding: 38px 70px;
+    position: absolute;
+    z-index: 2;
+    position: fixed;
+}
+label:before { top: 50px; }
+label:after { top: 70px; }
+
+#menu {
+    top: 44px;
+    width: 0px;
+    transition: .2s ease;
+    z-index: 2;
+    position: fixed;
+}
+#menu li {
+    line-height: 0.5;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#menu-toggle:checked + label:before {
+    top: 60px;
+    left: 50px;
+    transform: rotate(-45deg);
+}
+#menu-toggle:checked + label:after {
+    top: 60px;
+    left: 50px;
+    transform: rotate(45deg);
+}
+#menu-toggle:checked + label + #menu {
+    top: 44px;
+    width: 160px;
+    height: 110px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: .3s ease .2s;
+    z-index: 1;
+}
+#menu-toggle:checked + label + #menu li {
+    pointer-events: all;
+    font-family: 'TradeGothicLT-Bold';
+    line-height: 2.3;
+    opacity: 1;
+    z-index: 2;
+    transition: .2s ease .3s;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+
+/*<<<<<<<<HEADER<<<<*/
+    
+.home_button, .home_button:hover,
+.home_button:active  {
+  background-image: url(img/logo-black.svg);
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;  /* Or whatever */
+    height: 5%; /* Or whatever */
+    padding: 5px;
+    margin-left: 75%;
+    margin-top: 50px;
+    position: absolute;
+    position: fixed;
+    z-index:1;
+    
+}
+
+/*<<<<<<<<navigation<<<<*/
+
+.title {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 49%;
+    margin-top:400px;
+	z-index: 2;
+}
+
+.section {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 49%;
+    margin-top:480px;
+	z-index: 2;
+}
+
+
+.img3{
+        width: 60%;
+        height: 500px;
+        background-image: url(img/editorial/edit-1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 200px;
+    }
+
+.img3:hover{
+      
+        background-image: url(img/editorial/edit-1-hover.jpg);
+   
+    }
+
+.img4{
+        width: 40%;
+        height: 300px;
+        background-image: url(img/editorial/edit-2.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 50%;
+        position: absolute;
+        margin-top: 800px;
+    }
+
+.img4:hover{
+      
+        background-image: url(img/editorial/edit-2.jpg);
+   
+    }
+
+.title2 {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 30%;
+    margin-top:900px;
+	z-index: 2;
+}
+
+.section2 {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 30%;
+    margin-top:980px;
+	z-index: 2;
+}
+
+
+.img5 {
+        width: 60%;
+        height: 500px;
+        background-image: url(img/editorial/edit-3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 1200px;
+    }
+
+.img5:hover{
+      
+        background-image: url(img/editorial/edit-3.jpg);
+   
+    }
+
+.title3 {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 65%;
+    margin-top:1400px;
+	z-index: 2;
+}
+
+.section3 {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 65%;
+    margin-top:1480px;
+	z-index: 2;
+}
+
+.img6{
+        width: 45%;
+        height: 500px;
+        background-image: url(img/editorial/edit-1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 45%;
+        position: absolute;
+        margin-top: 1770px;
+    }
+
+.img6:hover{
+      
+        background-image: url(img/editorial/edit-1-hover.jpg);
+   
+    }
+
+.title4 {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 40%;
+    margin-top:1980px;
+	z-index: 2;
+}
+
+.section4 {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 40%;
+    margin-top:2060px;
+	z-index: 2;
+}
+
+.img7{
+        width: 40%;
+        height: 300px;
+        background-image: url(img/editorial/edit-2.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 2350px;
+    }
+
+.img7:hover{
+      
+        background-image: url(img/editorial/edit-2.jpg);
+   
+    }
+
+.title5 {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 40%;
+    margin-top:2460px;
+	z-index: 2;
+}
+
+.section5 {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 40%;
+    margin-top:2540px;
+	z-index: 2;
+}
+
+.img8 {
+        width: 60%;
+        height: 500px;
+        background-image: url(img/editorial/edit-3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 30%;
+        position: absolute;
+        margin-top: 2750px;
+    }
+
+.img8:hover{
+      
+        background-image: url(img/editorial/edit-3.jpg);
+   
+    }
+
+.title6 {
+    color: #000000;
+    padding: 6px;
+    font-size: 40px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 24%;
+    margin-top:2900px;
+	z-index: 2;
+}
+
+.section6 {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 24%;
+    margin-top:2980px;
+	z-index: 2;
+}
+
+/* <<<<<<<<<<<<footer<<<*/
+
+.social-container {
+  display: flex; /* or inline-flex */
+  width: 20%;
+  height: 30px;
+  margin-top: 255%;
+  left: 40%;
+  position: absolute;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  padding: 10px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  
+}
+
+.behance_button {
+    
+ width: 160%;  /* Or whatever */
+  min-height: 100%;
+  background-image: url(img/behance_color.png);
+  padding: 5px;
+  margin-top: 9px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.behance_button:hover,
+.behance_button:active {
+    background-image: url(img/behance-black.svg);
+    
+}
+
+
+
+  
+.insta_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/insta_4.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.insta_button:hover,
+.insta_button:active {
+    background-image: url(img/incta-black.svg);
+    
+}
+
+
+.linked_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/in.png);
+  padding: 5px;
+  margin-top: 6px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.linked_button:hover,
+.linked_button:active {
+    background-image: url(img/in-black.svg);
+    
+}
+
+.vimeo_button {
+    
+  width: 100%;  /* Or whatever */
+  min-height: 100%; /* Or whatever */
+  background-image: url(img/vimeo_color.png);
+  padding: 5px;
+  margin-top: 8px;
+  background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.vimeo_button:hover,
+.vimeo_button:active {
+    background-image: url(img/vimeo-black.png);
+    
+}

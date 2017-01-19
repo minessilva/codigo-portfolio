@@ -7,7 +7,12 @@
     <title>Maria Inês Silva — Designer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="favicons/manifest.json">
+<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 
 </head>
@@ -15,43 +20,54 @@
 <body>
     
   <!--    >>>>>>>>>>>header<<<<<<-->
-  
-    <ul class="menu-container">
-        
-      <li class="home_button"></li>
-  
-</ul>
-    
-    
-    <!--    >>>>>>>>>>>full video<<<<<<-->
+
+    <a href="index.html">
+        <li class="home_button"></li>
+    </a>
 
 
-       <video autoplay id="videobg" loop>
-                <source src="teste.webm" type="video/webm">
-                <source src="teste.mov" type="video/mp4">
+
+
+    <input type="checkbox" id="menu-toggle" checked/>
+    <label for="menu-toggle"></label>
+    <ul id="menu">
+        <li><a href="#workspace-container">WORKSPACE</a></li>
+     <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    
+	<!--    >>>>>>>>>>>full video<<<<<<-->
+	
+	
+	<section id="section04" class="demo">
+	
+		  <video autoplay id="videobg" loop>
+                <source src="home.webm" type="video/webm">
+                <source src="home.mp4" type="video/mp4">
                 Your browser does not support the video tag. I suggest you upgrade your browser.
             </video>
+		
+		
+	<a href="#workspace-container"><span></span></a>
+</section>
     
     
     <!--    >>>>>>>>>>>WORKSPACE<<<<<<-->
     
-    <div class="workspace-container">
+    <div id="workspace-container">
         
      
-           <a href="digital.html"><div class="digital"></div></a>
-           <a href="illustration.html"><div class="illustration"></div></a>
+           <a href="digital.html"><div class="digital">Digital</div></a>
+           <a href="illustration.html"><div class="illustration">Illustration</div></a>
         
-         <a href="editorial.html"><div class="editorial"></div></a>
+         <a href="editorial.html"><div class="editorial">Editorial</div></a>
         
-        <a href="photo.html"><div class="photo"></div></a>
-        <a href="miscellaneous.html"><div class="miscellaneous"></div></a>
-        
-        
-        
-      
-        
-  
+        <a href="photo.html"><div class="photo">Photography</div></a>
+        <a href="miscellaneous.html"><div class="miscellaneous">Miscellaneous</div></a>
+
 </div>
+	
      
     
 <!--    >>>>>>>>>>>footer<<<<<<-->
@@ -70,6 +86,13 @@
  
 </ul>
     
+	
+	
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index-2.js"></script>
+	  <script src="js/index.js"></script>
 
 
 </body>

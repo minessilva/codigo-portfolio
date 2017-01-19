@@ -104,7 +104,7 @@ label:after { top: 70px; }
 #menu-toggle:checked + label + #menu {
     top: 44px;
     width: 160px;
-    height: 145px;
+    height: 110px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
     transition: .3s ease .2s;
     z-index: 1;
@@ -126,7 +126,7 @@ label:after { top: 70px; }
     
 .home_button, .home_button:hover,
 .home_button:active  {
-  background-image: url(img/logo.svg);
+  background-image: url(img/logo-black.svg);
   background-size: contain;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -138,6 +138,7 @@ label:after { top: 70px; }
     margin-top: 50px;
     position: absolute;
     position: fixed;
+    z-index:1;
     
 }
 
@@ -182,28 +183,196 @@ label:after { top: 70px; }
         background-size: contain;
         -webkit-background-size: contain;
         -moz-background-size: contain;
-        margin-left: 15%;
+        margin-left: 10%;
         position: absolute;
-        margin-top: 920px;
+        margin-top: 1000px;
+    }
+
+
+#mySVG {
+  margin-top: 900px;
+  margin-left:42%;
+}
+
+
+.title {
+    color: #000000;
+    padding: 6px;
+    font-size: 30px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 45%;
+    margin-top:883px;
+}
+
+.section {
+    color: #000000;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Apercu-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 45%;
+    margin-top:940px;
+}
+
+.description-work {
+    color: #000000;
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Apercu-Bold';
+    position: absolute;
+    width:400px;
+    margin-left: 55%;
+    margin-top: 10px;
+    text-align: left;
+
+}
+
+.img2{
+        width: 100%;
+        height: 1000px;
+        background-image: url(img/book_frag/book-3.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        position: absolute;
+        margin-top: 460px;
+    }
+
+.img3{
+        width: 80%;
+        height: 1000px;
+        background-image: url(img/book_frag/book-4.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 1560px;
+    }
+
+.img4{
+        width: 50%;
+        height: 800px;
+        background-image: url(img/book_frag/book-5.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        position: absolute;
         
         
     }
 
-.text3 {
-    position: relative;
-    width:380px;
-    height: 350px;
-    margin-left: 15%;
-    margin-top: 30px;
-}
 
-.line2 {
-  margin-top: 270px;
-  margin-left: 200px;
-  position: absolute;
-}
+.img5{
+        width: 45%;
+        height: 400px;
+        background-image: url(img/book_frag/book-6.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 55%;
+        position: absolute;
+    }
 
-.title {
+.img6{
+        width: 45%;
+        height: 450px;
+        background-image: url(img/book_frag/book-7.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        margin-left: 55%;
+        position: absolute;
+        margin-top: 340px;
+        
+    }
+
+.section3{
+        width: 80%;
+        height: 790px;
+        margin-left: 10%;
+        position: relative;
+        margin-top: 2460px;
+        
+    }
+
+.img7{
+        width: 80%;
+        height: 1000px;
+        background-image: url(img/book_frag/book-8.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 150px;
+    }
+
+.img8{
+        width: 80%;
+        height: 1000px;
+        background-image: url(img/book_frag/book-9.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 10%;
+        position: absolute;
+        margin-top: 960px;
+    }
+
+.img9{
+        width: 25%;
+        height: 400px;
+        background-image: url(img/book_frag/book-10.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 20%;
+        position: absolute;
+        margin-top: 1860px;
+    }
+
+.img10{
+        width: 25%;
+        height: 400px;
+        background-image: url(img/book_frag/book-11.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 55%;
+        position: absolute;
+        margin-top: 1980px;
+    }
+
+.img11{
+        width: 60%;
+        height: 1000px;
+        background-image: url(img/book_frag/book-12.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        margin-left: 20%;
+        position: absolute;
+        margin-top: 2560px;
+    }
+
+
+.button-left {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -211,26 +380,52 @@ label:after { top: 70px; }
     border: none;
     position: absolute;
     width:370px;
-    margin-left: 15%;
-    margin-top:300px;
+    margin-left: 20%;
+    margin-top:3500px;
 }
 
-.text-edu {
+.button-right {
     color: #000000;
     padding: 6px;
-    font-size: 10px;
+    font-size: 20px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 71%;
+    margin-top:3500px;
+}
+
+.line2 {
+  margin-top: 3570px;
+  margin-left: 38%;
+  position: absolute;
+}
+
+.sub-title {
+    color: #000000;
+    padding: 6px;
+    font-size: 20px;
+    font-family: 'TradeGothicLT-Bold';
+    border: none;
+    position: absolute;
+    width:370px;
+    margin-left: 38%;
+    margin-top:3600px;
+}
+
+.ficha {
+    color: #000000;
+    padding: 6px;
+    font-size: 20px;
     font-family: 'Apercu-Bold';
     border: none;
     position: absolute;
-    width:420px;
-    margin-left: 15%;
-    margin-top: 350px;
+    width:450px;
+    margin-left: 38%;
+    margin-top: 3650px;
 
 }
-
-
-
-
 
 
 /* <<<<<<<<<<<<footer<<<*/
@@ -239,7 +434,7 @@ label:after { top: 70px; }
   display: flex; /* or inline-flex */
   width: 20%;
   height: 30px;
-  margin-top: 120%;
+  margin-top: 595%;
   left: 40%;
   position: absolute;
   flex-direction: row;
@@ -271,7 +466,7 @@ label:after { top: 70px; }
 
 .behance_button:hover,
 .behance_button:active {
-    background-image: url(img/behance_color.png);
+    background-image: url(img/behance-black.svg);
     
 }
 
@@ -293,7 +488,7 @@ label:after { top: 70px; }
 
 .insta_button:hover,
 .insta_button:active {
-    background-image: url(img/insta_4.png);
+    background-image: url(img/incta-black.svg);
     
 }
 
@@ -313,7 +508,7 @@ label:after { top: 70px; }
 
 .linked_button:hover,
 .linked_button:active {
-    background-image: url(img/in.png);
+    background-image: url(img/in-black.svg);
     
 }
 
@@ -332,6 +527,6 @@ label:after { top: 70px; }
 
 .vimeo_button:hover,
 .vimeo_button:active {
-    background-image: url(img/vimeo_color.png);
+    background-image: url(img/vimeo-black.png);
     
 }

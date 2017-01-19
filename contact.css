@@ -101,7 +101,7 @@ label:after { top: 70px; }
 #menu-toggle:checked + label + #menu {
     top: 44px;
     width: 160px;
-    height: 145px;
+    height: 110px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
     transition: .3s ease .2s;
     z-index: 1;
@@ -179,6 +179,11 @@ label:after { top: 70px; }
 
 }
 
+.traco {
+  margin-top: 5px;
+  position: absolute;
+}
+
 .email {
     color: #000000;
     padding: 16px;
@@ -235,7 +240,7 @@ label:after { top: 70px; }
 
 .behance_button:hover,
 .behance_button:active {
-    background-image: url(img/behance_color.png);
+    background-image: url(img/behance-black.svg);
     
 }
 
@@ -257,7 +262,7 @@ label:after { top: 70px; }
 
 .insta_button:hover,
 .insta_button:active {
-    background-image: url(img/insta_4.png);
+    background-image: url(img/incta-black.svg);
     
 }
 
@@ -277,7 +282,7 @@ label:after { top: 70px; }
 
 .linked_button:hover,
 .linked_button:active {
-    background-image: url(img/in.png);
+    background-image: url(img/in-black.svg);
     
 }
 
@@ -296,6 +301,6 @@ label:after { top: 70px; }
 
 .vimeo_button:hover,
 .vimeo_button:active {
-    background-image: url(img/vimeo_color.png);
+    background-image: url(img/vimeo-black.png);
     
 }
