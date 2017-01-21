@@ -1,0 +1,56 @@
+#menu, label:before, label:after {
+    content: "mis";
+    position: absolute;
+    left: 100px;
+    width: 40px;
+    height: 5px;
+    background-color: #ffffff;
+/*    //onde se muda a cor do menu e do x//*/
+    border-radius: 2px;
+    transition: .5s ease;
+    position: fixed;
+}
+
+#menu {
+    top: 44px;
+    width: 0px;
+    transition: .2s ease;
+    z-index: 2;
+    position: fixed;
+}
+#menu li {
+    line-height: 0.5;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#menu-toggle:checked + label:before {
+    top: 60px;
+    left: 50px;
+    transform: rotate(-45deg);
+}
+#menu-toggle:checked + label:after {
+    top: 60px;
+    left: 50px;
+    transform: rotate(45deg);
+}
+#menu-toggle:checked + label + #menu {
+    top: 44px;
+    width: 160px;
+    height: 110px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: .3s ease .2s;
+    z-index: 1;
+}
+#menu-toggle:checked + label + #menu li {
+    pointer-events: all;
+    font-family: 'TradeGothicLT-Bold';
+    line-height: 2.3;
+    opacity: 1;
+    z-index: 2;
+    transition: .2s ease .3s;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
