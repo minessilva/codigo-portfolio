@@ -1,6 +1,7 @@
 /*<<<<<<<<navigation<<<<*/
 
-video#videobg {
+.about {
+  video#videobg {
     position: relative;
     min-width: 100%;
     min-height: 100%;
@@ -12,28 +13,28 @@ video#videobg {
     -o-background-size: cover;
     background-size: cover;
 
-}
+  }
 
-.main_nav {
-  width: 100%;
-  height: 900px;
-  background-color: white;
-  z-index: 1;
-}
+  .main_nav {
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    z-index: 1;
+  }
 
-#text1 {
+  #text1 {
 
     position: relative;
     width:380px;
     height: 300px;
     margin-left: 15%;
     margin-top: 100px;
-/*    background-color: aqua;*/
+    /*    background-color: aqua;*/
 
 
-}
+  }
 
-.nome {
+  .nome {
     color: #000000;
     padding: 6px;
     font-size: 26px;
@@ -42,9 +43,9 @@ video#videobg {
     position: absolute;
     width:200px;
 
-}
+  }
 
-.traco {
+  .traco {
     color: #000000;
     padding: 6px;
     font-size: 26px;
@@ -55,9 +56,9 @@ video#videobg {
     margin-top: 20px;
     margin-left: 168px;
 
-}
+  }
 
-.text {
+  .text {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -67,18 +68,18 @@ video#videobg {
     width:370px;
     margin-top: 110px;
 
-}
+  }
 
-.text2 {
+  .text2 {
     position: relative;
     width:570px;
     height: 260px;
     margin-left: 50%;
     margin-top: -260px;
-/*    background-color: aqua;*/
-}
+    /*    background-color: aqua;*/
+  }
 
-.description {
+  .description {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -87,43 +88,43 @@ video#videobg {
     position: absolute;
     width:550px;
 
-}
+  }
 
-.line1 {
-  margin-top: 225px;
-  margin-left: 280px;
-  position: absolute;
-}
+  .line1 {
+    margin-top: 225px;
+    margin-left: 280px;
+    position: absolute;
+  }
 
-.about-gif{
-        width: 50%;
-        height: 50px;
-        background-image: url(/assets/img/about.gif);
-        background-repeat: no-repeat;
-        background-size: contain;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        margin-left: 25%;
-        position: absolute;
-        margin-top: 150px;
-/*        background-color: aqua;*/
-    }
+  .about-gif{
+    width: 50%;
+    height: 50px;
+    background-image: url(/assets/img/about.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    margin-left: 25%;
+    position: absolute;
+    margin-top: 150px;
+    /*        background-color: aqua;*/
+  }
 
-.text3 {
+  .text3 {
     position: relative;
     width:380px;
     height: 350px;
     margin-left: 15%;
     margin-top: 30px;
-}
+  }
 
-.line2 {
-  margin-top: 270px;
-  margin-left: 200px;
-  position: absolute;
-}
+  .line2 {
+    margin-top: 270px;
+    margin-left: 200px;
+    position: absolute;
+  }
 
-.title {
+  .title {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -133,9 +134,9 @@ video#videobg {
     width:370px;
     margin-left: 15%;
     margin-top:300px;
-}
+  }
 
-.text-edu {
+  .text-edu {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -146,23 +147,23 @@ video#videobg {
     margin-left: 15%;
     margin-top: 350px;
 
-}
+  }
 
-.text4 {
+  .text4 {
     position: relative;
     width:380px;
     height: 350px;
     margin-left: 15%;
     margin-top: 200px;
-}
+  }
 
-.line3 {
-  margin-top: 720px;
-  margin-left: 200px;
-  position: absolute;
-}
+  .line3 {
+    margin-top: 720px;
+    margin-left: 200px;
+    position: absolute;
+  }
 
-.title1 {
+  .title1 {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -172,8 +173,8 @@ video#videobg {
     width:370px;
     margin-left: 15%;
     margin-top:750px;
-}
-.text-work {
+  }
+  .text-work {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -184,15 +185,15 @@ video#videobg {
     margin-left: 15%;
     margin-top: 800px;
 
-}
+  }
 
-.line4 {
-  margin-top: 340px;
-  margin-left: 710px;
-  position: absolute;
-}
+  .line4 {
+    margin-top: 340px;
+    margin-left: 710px;
+    position: absolute;
+  }
 
-.title2 {
+  .title2 {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -202,8 +203,8 @@ video#videobg {
     width:370px;
     margin-left: 55%;
     margin-top:370px;
-}
-.text-project {
+  }
+  .text-project {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -213,17 +214,17 @@ video#videobg {
     width:440px;
     margin-left: 55%;
     margin-top: 420px;
-}
+  }
 
 
-.line5 {
-  margin-top: 1050px;
-  margin-left: 710px;
-  position: absolute;
-}
+  .line5 {
+    margin-top: 1050px;
+    margin-left: 710px;
+    position: absolute;
+  }
 
 
-.title3 {
+  .title3 {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -233,27 +234,27 @@ video#videobg {
     width:370px;
     margin-left: 55%;
     margin-top:1080px;
-}
+  }
 
-.line6 {
-  margin-top: 1160px;
-  margin-left: 710px;
-  position: absolute;
-}
+  .line6 {
+    margin-top: 1160px;
+    margin-left: 710px;
+    position: absolute;
+  }
 
-.line7 {
-  margin-top: 1160px;
-  margin-left: 830px;
-  position: absolute;
-}
+  .line7 {
+    margin-top: 1160px;
+    margin-left: 830px;
+    position: absolute;
+  }
 
-.line8 {
-  margin-top: 1160px;
-  margin-left: 950px;
-  position: absolute;
-}
+  .line8 {
+    margin-top: 1160px;
+    margin-left: 950px;
+    position: absolute;
+  }
 
-.language-text {
+  .language-text {
     color: #000000;
     padding: 6px;
     font-size: 12px;
@@ -264,9 +265,9 @@ video#videobg {
     margin-left: 55%;
     margin-top: 1170px;
     text-align: center;
-}
+  }
 
-.language-text2 {
+  .language-text2 {
     color: #000000;
     padding: 6px;
     font-size: 12px;
@@ -277,9 +278,9 @@ video#videobg {
     margin-left: 65%;
     margin-top: 1170px;
     text-align: center;
-}
+  }
 
-.language-text3 {
+  .language-text3 {
     color: #000000;
     padding: 6px;
     font-size: 12px;
@@ -290,16 +291,16 @@ video#videobg {
     margin-left: 73%;
     margin-top: 1170px;
     text-align: center;
-}
+  }
 
-.line9 {
-  margin-top: 1470px;
-  margin-left: 200px;
-  position: absolute;
-}
+  .line9 {
+    margin-top: 1470px;
+    margin-left: 200px;
+    position: absolute;
+  }
 
 
-.title4 {
+  .title4 {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -309,30 +310,30 @@ video#videobg {
     width:370px;
     margin-left: 15%;
     margin-top:1500px;
-}
+  }
 
- .skills {
-        width: 50%;
-        height: 5%;
-        background-image: url(/assets/img/soft.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        position: relative;
-        margin-left: 16%;
-        margin-top: 1600px;
+  .skills {
+    width: 50%;
+    height: 5%;
+    background-image: url(/assets/img/soft.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    position: relative;
+    margin-left: 16%;
+    margin-top: 1600px;
 
-    }
+  }
 
-.line10 {
-  margin-top: 100px;
-  margin-left: 200px;
-  position: absolute;
-}
+  .line10 {
+    margin-top: 100px;
+    margin-left: 200px;
+    position: absolute;
+  }
 
-
-.title5 {
+  
+  .title5 {
     color: #000000;
     padding: 6px;
     font-size: 20px;
@@ -342,17 +343,18 @@ video#videobg {
     width:370px;
     margin-left: 15%;
     margin-top:130px;
-}
+  }
 
- .clients {
-        width: 75%;
-        height: 8%;
-        background-image: url(/assets/img/clients.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        position: relative;
-        margin-left: 16%;
-        margin-top: 230px;
-    }
+  .clients {
+    width: 75%;
+    height: 8%;
+    background-image: url(/assets/img/clients.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    position: relative;
+    margin-left: 16%;
+    margin-top: 230px;
+  }
+}

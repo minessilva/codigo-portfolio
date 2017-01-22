@@ -8,39 +8,60 @@
 // 2) by writing "gulp minify" in order to minify your css!
 
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    browserSync = require('browser-sync').create(),
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    browserSync  = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
-    debug = false;
+    cp           = require('child_process'),
+    jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll',
+    messages = {
+        jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+    },
+    debug        = false;
 
 gulp.task('debug', function(){
   debug = true;
   console.log("\n W E L C O M E   T O  D E B U G   M O D E \n\n   Your scripts and css are no longer minified! WOOHOO!\n   Don't forget to execute 'gulp' before you commit / push any changes!\n   Happy codin!\n\n");
 });
 
-// task manager
+
+//  Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+// Rebuild Jekyll & do page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+// Wait for jekyll-build, then launch the Server
+gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
+});
+
+// Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
 gulp.task('sass', function(){
-  return gulp.src('./scss/*.scss')
-    .pipe(sass(debug ? "" : {outputStyle:'compressed'}).on('error', sass.logError))
+  return gulp.src('_sass/main.scss')
+    .pipe(sass(debug ? {includePaths: ['scss']} : { includePaths: ['scss'], outputStyle:'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 version', 'safari 6', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
     }))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('_site/css'))
+    .pipe(browserSync.reload({stream: true}))
+    .pipe(gulp.dest('css'));
 });
 
+// watch for changes in the following files
 gulp.task('serve', function(){
-  browserSync.init({
-    server:{
-      baseDir: './'
-    },
-  });
-
-  gulp.watch('./scss/*.scss', ['sass']);
-  gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch(['./scss/**/*.scss', './scss/*.scss'], ['sass']);
+  gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 // tasks
-gulp.task('minify', ['sass']);
-gulp.task('default', ['debug', 'sass', 'serve']);
+gulp.task('minify', ['browser-sync', 'serve']);
+gulp.task('default', ['debug', 'browser-sync', 'serve']);

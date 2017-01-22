@@ -23,28 +23,21 @@
 
 .behance_button {
 
- width: 160%;  /* Or whatever */
+  width: 160%;  /* Or whatever */
   min-height: 100%;
   background-image: url(/assets/img/behance_color.png);
   padding: 5px;
   margin-top: 9px;
   background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.behance_button:hover,
-.behance_button:active {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-repeat: no-repeat;
+  &:hover, &:active {
     background-image: url(/assets/img/behance-black.svg);
-
+  }
 }
-
-
-
 
 .insta_button {
-
   width: 100%;  /* Or whatever */
   min-height: 100%; /* Or whatever */
   background-image: url(/assets/img/insta_4.png);
@@ -59,7 +52,6 @@
 .insta_button:hover,
 .insta_button:active {
     background-image: url(/assets/img/incta-black.svg);
-
 }
 
 
