@@ -42,6 +42,9 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
             baseDir: '_site'
         }
     });
+
+    gulp.watch(['_sass/**/*.scss', '_sass/*.scss'], ['sass']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 // Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -58,8 +61,7 @@ gulp.task('sass', function(){
 
 // watch for changes in the following files
 gulp.task('serve', function(){
-  gulp.watch(['./scss/**/*.scss', './scss/*.scss'], ['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+
 });
 
 // tasks

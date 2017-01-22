@@ -1,9 +1,9 @@
 # Comum a todas as páginas
 
 * loading page - https://ihatetomatoes.net/create-custom-preloading-screen/
-* o menu está aberto sempre que faço refresh
-* a página do workspace dá acesso à segunda metade da homepage
-* inserir os metadados para a pesquisa (palavras-chave: ex - design, communication, graphic), basta fazer um e eu depois replico com outras palavras-chave (?)
+* ~~o menu está aberto sempre que faço refresh~~
+* ~~a página do workspace dá acesso à segunda metade da homepage~~
+* ~~inserir os metadados para a pesquisa (palavras-chave: ex - design, communication, graphic), basta fazer um e eu depois replico com outras palavras-chave (?)~~
 
 ### Homepage
 

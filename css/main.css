@@ -30,7 +30,6 @@ html, body {
 
 li, a {
   color: #000000;
-  text-indent: -15px;
   text-decoration: none;
   text-transform: none;
   list-style: none; }
@@ -52,18 +51,6 @@ section {
     content: '';
     width: 100%;
     height: 80%; }
-
-label {
-  padding: 38px 70px;
-  position: absolute;
-  z-index: 2;
-  position: fixed; }
-
-label:before {
-  top: 50px; }
-
-label:after {
-  top: 70px; }
 
 h1 {
   line-height: 0;
@@ -837,83 +824,91 @@ video#videobg {
   .codeconvey-icon span {
     display: none; } }
 
-.home_button, .home_button:hover,
-.home_button:active {
+.home_button {
   background-image: url(/assets/img/logo.svg);
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-repeat: no-repeat;
-  width: 20%;
-  /* Or whatever */
+  background-size: contain;
+  color: transparent;
   height: 5%;
-  /* Or whatever */
-  padding: 5px;
-  margin-left: 75%;
-  margin-top: 50px;
   position: fixed;
+  right: 45px;
+  top: 45px;
+  width: 20%;
   z-index: 1; }
 
-#menu, label:before, label:after {
-  content: "mis";
-  position: absolute;
-  left: 100px;
-  width: 40px;
+nav label {
+  cursor: pointer;
   height: 5px;
-  background-color: #ffffff;
-  /*    //onde se muda a cor do menu e do x//*/
-  border-radius: 2px;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  position: fixed; }
+  margin: 50px 0 0 45px;
+  padding: 0 0 20px;
+  position: fixed;
+  width: 40px;
+  z-index: 2; }
+  nav label::before, nav label::after {
+    content: "";
+    position: absolute;
+    left: 45px;
+    width: 40px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    position: fixed; }
+  nav label:before {
+    top: 50px;
+    box-shadow: 0 10px 0 white; }
+  nav label:after {
+    top: 70px; }
 
-#menu {
-  top: 44px;
-  width: 0px;
+nav .menu {
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 5px;
+  left: 45px;
+  position: fixed;
+  top: 45px;
   -webkit-transition: .2s ease;
   transition: .2s ease;
-  z-index: 2;
-  position: fixed; }
+  width: 0px;
+  z-index: 2; }
+  nav .menu li {
+    line-height: 0.5;
+    pointer-events: none;
+    opacity: 0; }
 
-#menu li {
-  line-height: 0.5;
-  pointer-events: none;
-  opacity: 0; }
-
-#menu-toggle:checked + label:before {
-  top: 60px;
-  left: 50px;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
-#menu-toggle:checked + label:after {
-  top: 60px;
-  left: 50px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-#menu-toggle:checked + label + #menu {
-  top: 44px;
-  width: 160px;
-  height: 110px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  -webkit-transition: .3s ease .2s;
-  transition: .3s ease .2s;
-  z-index: 1; }
-
-#menu-toggle:checked + label + #menu li {
-  pointer-events: all;
-  font-family: 'TradeGothicLT-Bold';
-  line-height: 2.3;
-  opacity: 1;
-  z-index: 2;
-  -webkit-transition: .2s ease .3s;
-  transition: .2s ease .3s; }
-
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+.menu-toggle {
   display: none; }
+  .menu-toggle:checked + label:before {
+    top: 60px;
+    left: 50px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    box-shadow: 0 0 0 transparent; }
+  .menu-toggle:checked + label:after {
+    top: 60px;
+    left: 50px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .menu-toggle:checked + label + .menu {
+    width: 160px;
+    height: 110px;
+    left: 101.25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    -webkit-transition: .3s ease .2s;
+    transition: .3s ease .2s;
+    z-index: 1; }
+    .menu-toggle:checked + label + .menu li {
+      pointer-events: all;
+      padding-left: 10px;
+      line-height: 2.3;
+      opacity: 1;
+      z-index: 2;
+      -webkit-transition: .2s ease .3s;
+      transition: .2s ease .3s; }
 
 .project .main_nav {
   width: 100%;
