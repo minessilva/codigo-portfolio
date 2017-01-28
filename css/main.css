@@ -1091,11 +1091,22 @@ nav .menu {
     width: 36px;
     z-index: 1; }
 
+.workspace__prefetch::after {
+  background: url("/assets/img/workspace/drawing-base.svg"), url("/assets/img/workspace/digital.svg"), url("/assets/img/workspace/illustration.svg"), url("/assets/img/workspace/editorial.svg"), url("/assets/img/workspace/photo.svg"), url("/assets/img/workspace/misc.svg");
+  content: '';
+  height: 0;
+  width: 0; }
+
 .workspace {
+  box-sizing: border-box;
   height: -webkit-calc(100vh - 100px);
   height: calc(100vh - 100px);
+  padding-top: 4em;
   position: relative;
   width: 100%; }
+  @media all and (min-width: 768px) {
+    .workspace {
+      padding: 4em 4em 0; } }
   .workspace__background {
     background-image: url("/assets/img/workspace/drawing-base.svg");
     background-size: contain;
@@ -1103,21 +1114,87 @@ nav .menu {
     background-repeat: no-repeat;
     height: -webkit-calc(100vh - 70px);
     height: calc(100vh - 70px);
+    left: 0;
+    opacity: 0.33;
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: -1; }
-  .workspace__digital:hover ~ .workspace__background,
-  .workspace__digital:focus ~ .workspace__background {
-    background-image: url("/assets/img/workspace/digital.svg"); }
-  .workspace__illustration:hover ~ .workspace__background,
-  .workspace__illustration:focus ~ .workspace__background {
-    background-image: url("/assets/img/workspace/illustration.svg"); }
-  .workspace__editorial:hover ~ .workspace__background,
-  .workspace__editorial:focus ~ .workspace__background {
-    background-image: url("/assets/img/workspace/editorial.svg"); }
-  .workspace__photo:hover ~ .workspace__background,
-  .workspace__photo:focus ~ .workspace__background {
-    background-image: url("/assets/img/workspace/photo.svg"); }
-  .workspace__misc:hover ~ .workspace__background,
-  .workspace__misc:focus ~ .workspace__background {
-    background-image: url("/assets/img/workspace/misc.svg"); }
+    @media all and (min-width: 768px) {
+      .workspace__background {
+        opacity: 1; } }
+  .workspace a {
+    display: block;
+    margin-top: 2em;
+    position: relative;
+    text-align: center; }
+    @media all and (min-width: 768px) {
+      .workspace a {
+        display: inline-block;
+        position: absolute;
+        margin: 0; } }
+  @media all and (min-width: 768px) {
+    .workspace__editorial {
+      top: 30%;
+      height: 30%;
+      width: 35%; } }
+  @media all and (min-width: 992px) {
+    .workspace__editorial {
+      left: 10%; } }
+  .workspace__editorial:hover, .workspace__editorial:focus {
+    color: #f04319; }
+    .workspace__editorial:hover ~ .workspace__background, .workspace__editorial:focus ~ .workspace__background {
+      background-image: url("/assets/img/workspace/editorial.svg"); }
+  @media all and (min-width: 768px) {
+    .workspace__misc {
+      bottom: 25%;
+      left: 40%;
+      padding-top: 25%;
+      padding-right: 10%; } }
+  @media all and (min-width: 992px) {
+    .workspace__misc {
+      padding-top: 15%; } }
+  .workspace__misc:hover, .workspace__misc:focus {
+    color: #f04319; }
+    .workspace__misc:hover ~ .workspace__background, .workspace__misc:focus ~ .workspace__background {
+      background-image: url("/assets/img/workspace/misc.svg"); }
+  @media all and (min-width: 768px) {
+    .workspace__digital {
+      height: 35%;
+      left: 39%;
+      top: 18%;
+      width: 25%; } }
+  @media all and (min-width: 992px) {
+    .workspace__digital {
+      top: 10%; } }
+  .workspace__digital:hover, .workspace__digital:focus {
+    color: #f04319; }
+    .workspace__digital:hover ~ .workspace__background, .workspace__digital:focus ~ .workspace__background {
+      background-image: url("/assets/img/workspace/digital.svg"); }
+  @media all and (min-width: 768px) {
+    .workspace__photo {
+      bottom: 10%;
+      padding: 12% 25% 20% 0;
+      right: 10%; } }
+  @media all and (min-width: 992px) {
+    .workspace__photo {
+      bottom: 0;
+      padding: 15% 30% 20% 0;
+      right: 0; } }
+  @media all and (min-width: 1200px) {
+    .workspace__photo {
+      padding: 15% 37% 14% 0; } }
+  .workspace__photo:hover, .workspace__photo:focus {
+    color: #f04319; }
+    .workspace__photo:hover ~ .workspace__background, .workspace__photo:focus ~ .workspace__background {
+      background-image: url("/assets/img/workspace/photo.svg"); }
+  @media all and (min-width: 768px) {
+    .workspace__illustration {
+      right: 12%;
+      top: 30%;
+      width: 25%;
+      height: 20%; } }
+  .workspace__illustration:hover, .workspace__illustration:focus {
+    color: #f04319; }
+    .workspace__illustration:hover ~ .workspace__background, .workspace__illustration:focus ~ .workspace__background {
+      background-image: url("/assets/img/workspace/illustration.svg"); }
