@@ -1,109 +1,54 @@
-#workspace-container {
-  width: 80%;
-  height: 700px;
-  margin-left: 8%;
-  margin-top:2%;
-  background-position: center;
-  list-style: none;
-  background-image: url(/assets/img/final_contorno.png);
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-repeat: no-repeat;
-}
+.workspace {
+  // 100px = footer's height
+  height: calc(100vh - 100px);
+  position: relative;
+  width: 100%;
 
-.digital {
-  width: 30%;  /* Or whatever */
-  height: 230px; /* Or whatever */
-  margin-left: 390px;
-  margin-top: 120px;
-  position:absolute;
-
-}
-
-.digital:hover,
-.digital:active  {
-  background-image: url(/assets/img/digital.png);
-  background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
+  &__background {
+    background-image: url('/assets/img/workspace/drawing-base.svg');
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-}
+    height: calc(100vh - 70px);
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
 
-.illustration {
-  width: 25%;
-  height: 150px;
-  padding: 5px;
-  margin-left: 630px;
-  margin-top: 235px;
-  position:absolute;
+  // ---- LINKS
 
-}
+  &__digital {
+    &:hover ~ .workspace__background,
+    &:focus ~ .workspace__background {
+      background-image: url('/assets/img/workspace/digital.svg');
+    }
+  }
 
-.illustration:hover,
-.illustration:active  {
-  background-image: url(/assets/img/illustration.png);
-  background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-repeat: no-repeat;
-}
+  &__illustration {
+    &:hover ~ .workspace__background,
+    &:focus ~ .workspace__background {
+      background-image: url('/assets/img/workspace/illustration.svg');
+    }
+  }
 
-.editorial {
-  width: 40%;
-  height: 190px;
-  padding: 5px;
-  margin-left: 40px;
-  margin-top: 240px;
-  position:absolute;
+  &__editorial {
+    &:hover ~ .workspace__background,
+    &:focus ~ .workspace__background {
+      background-image: url('/assets/img/workspace/editorial.svg');
+    }
+  }
 
-}
+  &__photo {
+    &:hover ~ .workspace__background,
+    &:focus ~ .workspace__background {
+      background-image: url('/assets/img/workspace/photo.svg');
+    }
+  }
 
-.editorial:hover,
-.editorial:active  {
-  background-image: url(/assets/img/editorial.png);
-  background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-.photo {
-  width: 40%;
-  height: 380px;
-  padding: 5px;
-  margin-left: 665px;
-  margin-top: 325px;
-  position:absolute;
-}
-
-.photo:hover,
-.photo:active  {
-  background-image: url(/assets/img/fotografia.png);
-  background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-.miscellaneous {
-  width: 20%;
-  height: 150px;
-  padding: 5px;
-  margin-left: 400px;
-  margin-top: 340px;
-  position:absolute;
-
-}
-
-.miscellaneous:hover,
-.miscellaneous:active  {
-  background-image: url(/assets/img/varios.png);
-  background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-repeat: no-repeat;
-
+  &__misc {
+    &:hover ~ .workspace__background,
+    &:focus ~ .workspace__background {
+      background-image: url('/assets/img/workspace/misc.svg');
+    }
+  }
 }

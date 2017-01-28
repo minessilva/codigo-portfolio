@@ -1,58 +1,94 @@
-$navbar_padding: 45px;
+$navbar_padding: 75px;
+$navbar_strip_height: 4px;
+$navbar_strip_width: 40px;
 
 // --- logo
 .home_button {
   background-image: url(/assets/img/logo.svg);
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
   color: transparent;
-  height: 5%;
+  height: auto;
+  min-height: $navbar_padding/2;
   position: fixed;
-  right: $navbar_padding;
-  top: $navbar_padding;
-  width: 20%;
+  right: $navbar_padding/2;
+  top: $navbar_padding/2;
   z-index:1;
+
+  @include media-above($tablet) {
+    min-height: $navbar_padding;
+    right: $navbar_padding;
+    top: $navbar_padding;
+  }
+
 }
 
 // --- hamburger menu
-
 nav {
   label {
     cursor: pointer;
-    height: 5px;
-    margin: 50px 0 0 $navbar_padding;
-    padding: 0 0 20px;
+    height: $navbar_strip_height;
+    margin: $navbar_padding/2 0 0 $navbar_padding/2;
+    padding: 0 0 $navbar_strip_height*5;
     position: fixed;
     width: 40px;
     z-index: 2;
 
+    @include media-above($tablet) {
+      margin: $navbar_padding 0 0 $navbar_padding;
+    }
+
     &::before, &::after {
       content: "";
       position: absolute;
-      left: $navbar_padding;
-      width: 40px;
-      height: 5px;
+      left: $navbar_padding/2;
+      width: $navbar_strip_width;
+      height: $navbar_strip_height;
       background-color: #ffffff;
       border-radius: 2px;
       transition: .5s ease;
       position: fixed;
+
+      @include media-above($tablet) {
+        left: $navbar_padding;
+      }
     }
 
-    &:before { top: 50px; box-shadow: 0 10px 0 white;}
-    &:after { top: 70px; }
+    &:before {
+      top: $navbar_padding/2;
+      box-shadow: 0 $navbar_strip_height*2 0 white;
+
+      @include media-above($tablet) {
+        top: $navbar_padding;
+      }
+    }
+
+    &:after {
+      top: ($navbar_padding/2)+($navbar_strip_height*4);
+
+      @include media-above($tablet) {
+        top: $navbar_padding+($navbar_strip_height*4);
+      }
+    }
   }
 
   .menu {
     background: white;
     border-radius: 2px;
     cursor: pointer;
-    height: 5px;
-    left: $navbar_padding;
+    height: $navbar_strip_height;
+    left: $navbar_padding/2;
     position: fixed;
-    top: $navbar_padding;
+    top: $navbar_padding/2;
     transition: .2s ease;
     width: 0px;
     z-index: 2;
+
+    @include media-above($tablet) {
+      left: $navbar_padding;
+      top: $navbar_padding;
+    }
 
     li {
         line-height: 0.5;
@@ -66,25 +102,38 @@ nav {
     display: none;
 
     &:checked + label:before {
-        top: 60px;
-        left: 50px;
-        transform: rotate(-45deg);
         box-shadow: 0 0 0 transparent;
-    }
+        left: $navbar_padding/2;
+        top: ($navbar_padding/2)+($navbar_strip_height*2.5);
+        transform: rotate(-45deg);
 
+        @include media-above($tablet) {
+          left: $navbar_padding;
+          top: $navbar_padding+($navbar_strip_height*2.5);
+        }
+    }
     &:checked + label:after {
-        top: 60px;
-        left: 50px;
+        left: $navbar_padding/2;
+        top: ($navbar_padding/2)+($navbar_strip_height*2.5);
         transform: rotate(45deg);
+
+        @include media-above($tablet) {
+          left: $navbar_padding;
+          top: $navbar_padding+($navbar_strip_height*2.5);
+        }
     }
 
     &:checked + label + .menu {
         width: 160px;
         height: 110px;
-        left: $navbar_padding * 2.25;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        left: ($navbar_padding/2)+($navbar_strip_width*1.5);
+        box-shadow: 0 2px $navbar_strip_height rgba(0,0,0,0.26);
         transition: .3s ease .2s;
         z-index: 1;
+
+        @include media-above($tablet) {
+          left: $navbar_padding+($navbar_strip_width*2);
+        }
 
         li {
             pointer-events: all;

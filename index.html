@@ -3,31 +3,24 @@ layout: default
 ---
 
 <!--    >>>>>>>>>>>full video<<<<<<-->
-<section id="section04" class="demo">
-  <video autoplay id="videobg" loop>
+<section class="video-container">
+  <video autoplay loop>
     <source src="/assets/videos/home.webm" type="video/webm">
     <source src="/assets/videos/home.mp4" type="video/mp4">
       Your browser does not support the video tag. I suggest you upgrade your browser.
   </video>
-  <a href="#workspace-container"><span></span></a>
+
+  <a href="#workspace-container" class="video-container__slider"><span></span></a>
 </section>
 
 <!--    >>>>>>>>>>>WORKSPACE<<<<<<-->
-<div id="workspace-container">
-  <a href="digital.html"><div class="digital">Digital</div></a>
-  <a href="illustration.html"><div class="illustration">Illustration</div></a>
-  <a href="editorial.html"><div class="editorial">Editorial</div></a>
-  <a href="photo.html"><div class="photo">Photography</div></a>
-  <a href="miscellaneous.html"><div class="miscellaneous">Miscellaneous</div></a>
-</div>
 
-<!--    >>>>>>>>>>>footer<<<<<<-->
+<section id="workspace-container" class="workspace">
+  <a href="digital.html" class="workspace__digital">Digital</a>
+  <a href="illustration.html" class="workspace__illustration">Illustration</a>
+  <a href="editorial.html" class="workspace__editorial">Editorial</a>
+  <a href="photo.html" class="workspace__photo">Photography</a>
+  <a href="miscellaneous.html" class="workspace__misc">Miscellaneous</a>
 
-<ul class="social-container">
-  <a href="https://www.behance.net/mariainesssts" target="_blank"><li class="behance_button"></li></a>
-  <a href="https://www.instagram.com/m.ines.s.silva/" target="_blank"><li class="insta_button"></li></a>
-  <a href="https://pt.linkedin.com/in/maria-inês-silva-a6b502a8" target="_blank"><li class="linked_button"></li></a>
-  <a href="https://vimeo.com/user26046704" target="_blank"><li class="vimeo_button"></li></a>
-</ul>
-
-{% include index_scripts.html %}
+    <div class="workspace__background"></div>
+</section>
