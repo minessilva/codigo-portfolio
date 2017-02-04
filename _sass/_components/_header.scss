@@ -4,7 +4,7 @@ $navbar_strip_width: 40px;
 
 // --- logo
 .home_button {
-  background-image: url(/assets/img/logo.svg);
+  background-image: url(/assets/img/logo-black.svg);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -20,6 +20,10 @@ $navbar_strip_width: 40px;
     min-height: $navbar_padding;
     right: $navbar_padding;
     top: $navbar_padding;
+  }
+
+  &.home_button--active {
+    background-image: url(/assets/img/logo.svg);
   }
 
 }
@@ -45,7 +49,7 @@ nav {
       left: $navbar_padding/2;
       width: $navbar_strip_width;
       height: $navbar_strip_height;
-      background-color: #ffffff;
+      background-color: $red;
       border-radius: 2px;
       transition: .5s ease;
       position: fixed;
@@ -55,20 +59,29 @@ nav {
       }
     }
 
-    &:before {
+    &::before {
       top: $navbar_padding/2;
-      box-shadow: 0 $navbar_strip_height*2 0 white;
+      box-shadow: 0 $navbar_strip_height*2 0 $red;
 
       @include media-above($tablet) {
         top: $navbar_padding;
       }
     }
 
-    &:after {
+    &::after {
       top: ($navbar_padding/2)+($navbar_strip_height*4);
 
       @include media-above($tablet) {
         top: $navbar_padding+($navbar_strip_height*4);
+      }
+    }
+
+    &.menu-toggle--active {
+      &::before, &::after {
+        background-color: $white;
+      }
+      &::before {
+        box-shadow: 0 $navbar_strip_height*2 0 $white;
       }
     }
   }
@@ -102,7 +115,7 @@ nav {
     display: none;
 
     &:checked + label:before {
-        box-shadow: 0 0 0 transparent;
+        box-shadow: 0 0 0 $red;
         left: $navbar_padding/2;
         top: ($navbar_padding/2)+($navbar_strip_height*2.5);
         transform: rotate(-45deg);

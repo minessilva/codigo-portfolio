@@ -7,7 +7,6 @@
 // 1) by writing "gulp" on your terminal, and watching things run...
 // 2) by writing "gulp minify" in order to minify your css!
 
-
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     browserSync  = require('browser-sync'),
@@ -44,7 +43,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     });
 
     gulp.watch(['_sass/**/*.scss', '_sass/*.scss'], ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html','_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html','_posts/*', 'js/*.js'], ['jekyll-rebuild']);
 });
 
 // Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)

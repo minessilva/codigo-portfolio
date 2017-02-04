@@ -1,0 +1,30 @@
+.grid {
+  width: 100%;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  > * {
+    float: left;
+  }
+}
+
+.col-1-2 {
+  padding: 0;
+  width: 100%;
+  @include media-above($tablet) {
+    padding-right: 80px;
+    width: 50%;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.col-2-2 {
+  width: 100%;
+}
