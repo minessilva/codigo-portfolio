@@ -7,11 +7,16 @@
 
 .img-full {
   width: 100%;
+  margin-bottom: 10%;
 }
 
 .img-center {
   width: 80%;
-  margin: 10% 10% 15%;
+  margin: 0 10% 10%;
+}
+
+.panorama {
+  margin-bottom: 10%;
 }
 
 .img-three {
@@ -46,17 +51,14 @@
 
 .img-two {
   @extend .img-center;
-  height: 600px;
-  height: 60vh;
   clear: both;
 
   &__col {
     @extend %img-background;
     display: inline-block;
-    float: left;
     padding-bottom: 60%;
     margin: 10% 15% 0 7.5%;
-    width: 35%;
+    width: 34%;
 
     &:last-of-type {
       margin: 0 7.5% 10% 0;
@@ -113,7 +115,7 @@
     clear: both;
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0 6rem;
+    margin: 10% 0 6rem;
 
     a {
       font-family: $TradeGothic;

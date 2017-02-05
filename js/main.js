@@ -32,3 +32,9 @@ $(function() {
 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 	});
 });
+
+// PANORAMA
+$(function () {
+    // Paver
+    $('div.panorama').paver();
+});
