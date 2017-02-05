@@ -3,7 +3,6 @@
 NOT DONE YET
 
 * POST: aumentar a linha svg para esta ficar até ao fim da página para depois por fazer a animação com o scroll (-scroll animation - http://www.w3schools.com/howto/howto_js_scrolldrawing.asp)
-* POST: panoramica e vídeos no topo - http://terrymun.github.io/paver/demo/index.html (isto só acontece nas outras páginas que vão ser replicadas por mim a partir desta)
 
 * loading page - https://ihatetomatoes.net/create-custom-preloading-screen/
 
@@ -22,6 +21,7 @@ DONE
 * ~~ABOUT: export img for ABOUT~~
 * ~~EDITORIAL: make for + style~~
 * ~~POST: MOBILE: fica tudo numa coluna, o texto e o sub-titulo ficam mas a imagem em miniatura desaparece (ver imagem que está na pasta - mobile-disposicao/)~~
+* ~~POST: panoramica e vídeos no topo - http://terrymun.github.io/paver/demo/index.html (isto só acontece nas outras páginas que vão ser replicadas por mim a partir desta)~~
 
 ***
 
