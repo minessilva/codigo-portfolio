@@ -14,6 +14,3 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 keywords:
   Maria Inês Silva, Designer, Graphic Designer, HTML, CSS, JavaScript
 exclude: [node_modules/]
-
-# Build settings
-markdown: kramdown

@@ -32,7 +32,8 @@ html {
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "TradeGothicLT-Bold", sans-serif; }
+  font-family: "TradeGothicLT-Bold", sans-serif;
+  overflow-x: hidden; }
 
 li, a {
   color: #000000;
@@ -45,6 +46,26 @@ a:focus {
   font-weight: 700;
   -webkit-transition: .2s linear;
   transition: .2s linear; }
+
+.section--text, .about, .category, .project {
+  font-family: "Apercu-Bold", sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 30px; }
+  @media all and (min-width: 480px) {
+    .section--text, .about, .category, .project {
+      padding: 50px; } }
+  @media all and (min-width: 1200px) {
+    .section--text, .about, .category, .project {
+      padding: 120px; } }
+
+h2 {
+  font-family: "TradeGothicLT-Bold", sans-serif;
+  font-size: 2rem; }
+
+h3 {
+  font-family: "TradeGothicLT-Bold", sans-serif;
+  font-size: 1.25rem; }
 
 @-webkit-keyframes slider {
   0% {
@@ -66,87 +87,116 @@ a:focus {
             transform: rotate(-45deg) translate(0, 0); } }
 
 /*<<<<<<<<navigation<<<<*/
-.about {
-  padding: 30px;
-  font-family: "Apercu-Bold", sans-serif; }
-  @media all and (min-width: 480px) {
-    .about {
-      padding: 50px; } }
-  @media all and (min-width: 768px) {
-    .about {
-      padding: 120px; } }
-  .about__gif {
-    display: block;
-    margin: 75px -12.5%;
-    width: 125%; }
-    @media all and (min-width: 768px) {
-      .about__gif {
-        margin: 100px auto;
-        width: 80%; } }
-    @media all and (min-width: 1200px) {
-      .about__gif {
-        margin: 100px auto;
-        width: 70%; } }
-  .about h2 {
-    font-family: "TradeGothicLT-Bold", sans-serif;
-    font-size: 20px;
-    padding-top: 15px;
-    position: relative;
-    margin: 40px 0; }
-    .about h2::before {
-      background-color: #000;
-      content: '';
-      display: inline-block;
-      height: 2px;
-      position: absolute;
-      top: 0;
-      width: 25px; }
-    .about h2.about__name {
-      display: inline-block; }
-      .about h2.about__name::before {
-        bottom: 0;
-        right: -12.5px;
-        top: auto; }
-  .about a {
-    border-bottom: 2px solid #000; }
-    .about a:hover, .about a:focus {
-      border-bottom: none; }
-  .about__first-paragraph {
-    padding-top: 2.5rem; }
-  .about li, .about dd {
-    margin-bottom: 1rem; }
-  .about .skills {
-    width: 50%;
-    height: 5%;
-    background-image: url(/assets/img/soft.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    position: relative;
-    margin-left: 16%;
-    margin-top: 1600px; }
-  .about .clients {
-    width: 75%;
-    height: 8%;
-    background-image: url(/assets/img/clients.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    position: relative;
-    margin-left: 16%;
-    margin-top: 230px; }
+.about h2 {
+  font-family: "TradeGothicLT-Bold", sans-serif;
+  font-size: 20px;
+  padding-top: 15px;
+  position: relative;
+  margin: 40px 0; }
+  .about h2::before {
+    background-color: #000;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    width: 2rem; }
+  .about h2.about__name {
+    display: inline-block; }
+    .about h2.about__name::before {
+      bottom: -0.25rem;
+      right: -1rem;
+      top: auto; }
+  .about h2.about__title--adjust {
+    margin-top: 0; }
 
-.languages {
-  display: float;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .languages__item {
+.about__gif {
+  display: block;
+  margin: 75px -12.5%;
+  width: 125%; }
+  @media all and (min-width: 768px) {
+    .about__gif {
+      margin: 100px auto;
+      width: 80%; } }
+  @media all and (min-width: 1200px) {
+    .about__gif {
+      margin: 100px auto;
+      width: 70%; } }
+
+.about__first-paragraph {
+  padding-top: 2.5rem; }
+
+.about li, .about dd {
+  margin-bottom: 1rem; }
+
+.about li::before {
+  content: "- "; }
+
+.about a {
+  border-bottom: 2px solid #000; }
+  .about a:hover, .about a:focus {
+    border-bottom: none; }
+
+.about__skills img {
+  height: 3rem;
+  margin: 0 0.5rem 0.5rem 0; }
+  .about__skills img:least-of-type {
+    margin-right: 0; }
+
+.about__clients img {
+  height: 4rem;
+  margin: 0 0.5rem 0.5rem 0; }
+  .about__clients img:least-of-type {
+    margin-right: 0; }
+
+.about__languages {
+  clear: both;
+  display: table; }
+  .about__languages__item {
     border-top: 2px solid #000;
-    padding: 0.5rem;
+    float: left;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
     text-align: center; }
+    .about__languages__item:last-of-type {
+      margin: 0; }
+
+.category {
+  overflow: hidden; }
+  .category__project {
+    clear: both;
+    position: relative;
+    margin: 0 0 6rem;
+    width: 80%; }
+    @media all and (min-width: 768px) {
+      .category__project {
+        width: 60%;
+        margin: 0 0 4rem; } }
+    .category__project__title {
+      position: absolute;
+      left: 25%;
+      top: 70%;
+      width: 100%;
+      z-index: 1; }
+      @media all and (min-width: 768px) {
+        .category__project__title {
+          left: 90%;
+          top: 50%; } }
+    .category__project__image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .category__project__image img {
+        width: 100%; }
+        .category__project__image img:hover, .category__project__image img:focus {
+          opacity: 0; }
+    .category__project.right {
+      float: right; }
+      .category__project.right .category__project__title {
+        left: -25%; }
+        @media all and (min-width: 768px) {
+          .category__project.right .category__project__title {
+            left: -20%; } }
 
 .grid {
   width: 100%; }
@@ -217,241 +267,6 @@ a:focus {
   width: 180px;
   margin-left: 10%;
   margin-top: 780px; }
-
-/*<<<<<<<<navigation<<<<*/
-.title {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 49%;
-  margin-top: 400px;
-  z-index: 2; }
-
-.section {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 49%;
-  margin-top: 480px;
-  z-index: 2; }
-
-.img3 {
-  width: 60%;
-  height: 500px;
-  background-image: url(/assets/img/editorial/edit-1.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 200px; }
-
-.img3:hover {
-  background-image: url(/assets/img/editorial/edit-1-hover.jpg); }
-
-.img4 {
-  width: 40%;
-  height: 300px;
-  background-image: url(/assets/img/editorial/edit-2.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 50%;
-  position: absolute;
-  margin-top: 800px; }
-
-.img4:hover {
-  background-image: url(/assets/img/editorial/edit-2.jpg); }
-
-.title2 {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 30%;
-  margin-top: 900px;
-  z-index: 2; }
-
-.section2 {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 30%;
-  margin-top: 980px;
-  z-index: 2; }
-
-.img5 {
-  width: 60%;
-  height: 500px;
-  background-image: url(/assets/img/editorial/edit-3.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 1200px; }
-
-.img5:hover {
-  background-image: url(/assets/img/editorial/edit-3.jpg); }
-
-.title3 {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 65%;
-  margin-top: 1400px;
-  z-index: 2; }
-
-.section3 {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 65%;
-  margin-top: 1480px;
-  z-index: 2; }
-
-.img6 {
-  width: 45%;
-  height: 500px;
-  background-image: url(/assets/img/editorial/edit-1.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 45%;
-  position: absolute;
-  margin-top: 1770px; }
-
-.img6:hover {
-  background-image: url(/assets/img/editorial/edit-1-hover.jpg); }
-
-.title4 {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 40%;
-  margin-top: 1980px;
-  z-index: 2; }
-
-.section4 {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 40%;
-  margin-top: 2060px;
-  z-index: 2; }
-
-.img7 {
-  width: 40%;
-  height: 300px;
-  background-image: url(/assets/img/editorial/edit-2.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 2350px; }
-
-.img7:hover {
-  background-image: url(/assets/img/editorial/edit-2.jpg); }
-
-.title5 {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 40%;
-  margin-top: 2460px;
-  z-index: 2; }
-
-.section5 {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 40%;
-  margin-top: 2540px;
-  z-index: 2; }
-
-.img8 {
-  width: 60%;
-  height: 500px;
-  background-image: url(/assets/img/editorial/edit-3.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 30%;
-  position: absolute;
-  margin-top: 2750px; }
-
-.img8:hover {
-  background-image: url(/assets/img/editorial/edit-3.jpg); }
-
-.title6 {
-  color: #000000;
-  padding: 6px;
-  font-size: 40px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 24%;
-  margin-top: 2900px;
-  z-index: 2; }
-
-.section6 {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 24%;
-  margin-top: 2980px;
-  z-index: 2; }
 
 .social {
   display: -webkit-box;
@@ -619,234 +434,110 @@ nav .menu {
       -webkit-transition: .2s ease .3s;
       transition: .2s ease .3s; }
 
-.project .main_nav {
-  width: 100%;
-  height: 700px;
-  background-image: url(/assets/img/book_frag/book-1.jpg);
+.img-three__col, .img-three__col__row, .img-two__col {
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover; }
 
-.project .image-thumb {
-  width: 35%;
-  height: 30%;
-  background-image: url(/assets/img/book_frag/book-2.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 1000px; }
+.img-full {
+  width: 100%; }
 
-.project #mySVG {
-  margin-top: 900px;
-  margin-left: 42%; }
-
-.project .title {
-  color: #000000;
-  padding: 6px;
-  font-size: 30px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 45%;
-  margin-top: 883px; }
-
-.project .section {
-  color: #000000;
-  padding: 6px;
-  font-size: 16px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 45%;
-  margin-top: 940px; }
-
-.project .description-work {
-  color: #000000;
-  padding: 10px;
-  font-size: 12px;
-  font-family: 'Apercu-Bold';
-  position: absolute;
-  width: 400px;
-  margin-left: 55%;
-  margin-top: 10px;
-  text-align: left; }
-
-.project .img2 {
-  width: 100%;
-  height: 1000px;
-  background-image: url(/assets/img/book_frag/book-3.gif);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  position: absolute;
-  margin-top: 460px; }
-
-.project .img3 {
+.img-center, .img-three, .img-two {
   width: 80%;
-  height: 1000px;
-  background-image: url(/assets/img/book_frag/book-4.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 1560px; }
+  margin: 10% 10% 15%; }
 
-.project .img4 {
-  width: 50%;
-  height: 800px;
-  background-image: url(/assets/img/book_frag/book-5.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  position: absolute; }
+.img-three {
+  height: 600px;
+  height: 60vh;
+  clear: both; }
+  .img-three__col {
+    float: left;
+    height: 600px;
+    height: 60vh;
+    margin-right: 1rem;
+    width: -webkit-calc(50% - 0.5rem);
+    width: calc(50% - 0.5rem); }
+    .img-three__col:last-of-type {
+      margin: 0; }
+  .img-three__col__row {
+    height: -webkit-calc(300px - 1rem);
+    height: calc(300px - 1rem);
+    height: -webkit-calc(30vh - 0.5rem);
+    height: calc(30vh - 0.5rem);
+    margin-bottom: 1rem; }
+    .img-three__col__row:last-of-type {
+      margin: 0; }
 
-.project .img5 {
-  width: 45%;
-  height: 400px;
-  background-image: url(/assets/img/book_frag/book-6.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 55%;
-  position: absolute; }
+.img-two {
+  height: 600px;
+  height: 60vh;
+  clear: both; }
+  .img-two__col {
+    display: inline-block;
+    float: left;
+    padding-bottom: 60%;
+    margin: 10% 15% 0 7.5%;
+    width: 35%; }
+    .img-two__col:last-of-type {
+      margin: 0 7.5% 10% 0; }
 
-.project .img6 {
-  width: 45%;
-  height: 450px;
-  background-image: url(/assets/img/book_frag/book-7.jpg);
+.project__lead {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  margin-left: 55%;
-  position: absolute;
-  margin-top: 340px; }
+  height: 600px;
+  height: 100vh; }
 
-.project .section3 {
-  width: 80%;
-  height: 790px;
-  margin-left: 10%;
-  position: relative;
-  margin-top: 2460px; }
+.project__sideImg img {
+  display: none;
+  margin: 4.5rem 0;
+  width: 100%; }
+  @media all and (min-width: 768px) {
+    .project__sideImg img {
+      display: block; } }
 
-.project .img7 {
-  width: 80%;
-  height: 1000px;
-  background-image: url(/assets/img/book_frag/book-8.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 150px; }
+.project__header {
+  position: relative; }
+  .project__header svg {
+    position: absolute;
+    top: 1.25rem; }
+  .project__header h2 {
+    padding-top: 2rem; }
+  .project__header .project__description {
+    margin-top: 2rem; }
+    .project__header .project__description p {
+      margin-top: 1rem; }
 
-.project .img8 {
-  width: 80%;
-  height: 1000px;
-  background-image: url(/assets/img/book_frag/book-9.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 10%;
-  position: absolute;
-  margin-top: 960px; }
+.project__navigation {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 0 6rem; }
+  .project__navigation a {
+    font-family: "TradeGothicLT-Bold", sans-serif;
+    font-size: 1.25rem;
+    border-bottom: 2px solid transparent; }
+    .project__navigation a:hover, .project__navigation a:focus {
+      border-bottom: 2px solid #000; }
+  .project__navigation .right {
+    float: right; }
 
-.project .img9 {
-  width: 25%;
-  height: 400px;
-  background-image: url(/assets/img/book_frag/book-10.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 20%;
-  position: absolute;
-  margin-top: 1860px; }
-
-.project .img10 {
-  width: 25%;
-  height: 400px;
-  background-image: url(/assets/img/book_frag/book-11.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 55%;
-  position: absolute;
-  margin-top: 1980px; }
-
-.project .img11 {
-  width: 60%;
-  height: 1000px;
-  background-image: url(/assets/img/book_frag/book-12.gif);
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  margin-left: 20%;
-  position: absolute;
-  margin-top: 2560px; }
-
-.project .button-left {
-  color: #000000;
-  padding: 6px;
-  font-size: 20px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 20%;
-  margin-top: 3500px; }
-
-.project .button-right {
-  color: #000000;
-  padding: 6px;
-  font-size: 20px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 71%;
-  margin-top: 3500px; }
-
-.project .line2 {
-  margin-top: 3570px;
-  margin-left: 38%;
-  position: absolute; }
-
-.project .sub-title {
-  color: #000000;
-  padding: 6px;
-  font-size: 20px;
-  font-family: 'TradeGothicLT-Bold';
-  border: none;
-  position: absolute;
-  width: 370px;
-  margin-left: 38%;
-  margin-top: 3600px; }
-
-.project .ficha {
-  color: #000000;
-  padding: 6px;
-  font-size: 20px;
-  font-family: 'Apercu-Bold';
-  border: none;
-  position: absolute;
-  width: 450px;
-  margin-left: 38%;
-  margin-top: 3650px; }
+.project .project__credits {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 80%; }
+  @media all and (min-width: 768px) {
+    .project .project__credits {
+      width: 50%; } }
+  .project .project__credits h3 {
+    border-top: 3px solid #000;
+    display: inline-block;
+    padding-top: 1rem;
+    margin-bottom: 2rem; }
 
 .video-container {
   height: 100vh;

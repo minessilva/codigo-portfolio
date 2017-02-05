@@ -1,14 +1,40 @@
 /*<<<<<<<<navigation<<<<*/
 .about {
-  padding: 30px;
-  font-family: $Apercu;
-  @include media-above($phone) {
-    padding: 50px;
-  }
-  @include media-above($tablet) {
-    padding: 120px;
+  @extend .section--text;
+
+  // TITLES --------------------------------
+  h2 {   // .about h2
+    font-family: $TradeGothic;
+    font-size: 20px;
+    padding-top: 15px;
+    position: relative;
+    margin: 40px 0;
+
+    &::before { // .about h2::before
+      background-color: $black;
+      content: '';
+      display: inline-block;
+      height: 3px;
+      position: absolute;
+      top: 0;
+      width: 2rem;
+    }
+
+    &.about__name { // .about h2.about__name
+      display: inline-block;
+      &::before {
+        bottom: -0.25rem;
+        right: -1rem;
+        top: auto;
+      }
+    }
+
+    &.about__title--adjust {
+      margin-top: 0;
+    }
   }
 
+  // SPECIFICS -------------------
   &__gif {  // .about__gif
     display: block;
     margin: 75px -12.5%;
@@ -23,30 +49,17 @@
     }
   }
 
-  h2 {   // .about h2
-    font-family: $TradeGothic;
-    font-size: 20px;
-    padding-top: 15px;
-    position: relative;
-    margin: 40px 0;
+  &__first-paragraph {
+    padding-top: 2.5rem;
+  }
 
-    &::before { // .about h2::before
-      background-color: $black;
-      content: '';
-      display: inline-block;
-      height: 2px;
-      position: absolute;
-      top: 0;
-      width: 25px;
-    }
+  li, dd {
+    margin-bottom: 1rem;
+  }
 
-    &.about__name { // .about h2.about__name
-      display: inline-block;
-      &::before {
-        bottom: 0;
-        right: -12.5px;
-        top: auto;
-      }
+  li {
+    &::before {
+      content: "- "
     }
   }
 
@@ -56,49 +69,42 @@
       border-bottom: none;
     }
   }
+}
 
-  &__first-paragraph {
-    padding-top: 2.5rem;
-  }
-
-  li, dd {
-    margin-bottom: 1rem;
-  }
-
-  .skills {
-    width: 50%;
-    height: 5%;
-    background-image: url(/assets/img/soft.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    position: relative;
-    margin-left: 16%;
-    margin-top: 1600px;
-  }
-
-  .clients {
-    width: 75%;
-    height: 8%;
-    background-image: url(/assets/img/clients.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    position: relative;
-    margin-left: 16%;
-    margin-top: 230px;
+// ----
+.about__skills {
+  img {
+    height: 3rem;
+    margin: 0 0.5rem 0.5rem 0;
+    &:least-of-type {
+      margin-right: 0;
+    }
   }
 }
 
-.languages {
-  display: float;
-  justify-content: space-between;
+.about__clients {
+  img {
+    height: 4rem;
+    margin: 0 0.5rem 0.5rem 0;
+    &:least-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.about__languages {
+  clear: both;
+  display: table;
 
   &__item {
     border-top: 2px solid $black;
-    padding: 0.5rem;
+    float: left;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
     text-align: center;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }

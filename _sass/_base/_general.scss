@@ -1,36 +1,3 @@
-@font-face {
-  font-family: 'TradeGothicLT-Bold';
-  src: url('/assets/fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.eot');
-  src: url('/assets/fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.woff') format('woff'),
-      url('/assets/fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.ttf')  format('truetype'),
-      url('/assets/fonts/TradeGothicLT-Bold/TradeGothicLT-Bold.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ApercuPro';
-  src: url('/assets/fonts/ApercuPro/ApercuPro.eot');
-  src: url('/assets/fonts/ApercuPro/ApercuPro.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/ApercuPro/ApercuPro.woff') format('woff'),
-      url('/assets/fonts/ApercuPro/ApercuPro.ttf')  format('truetype'),
-      url('/assets/fonts/ApercuPro/ApercuPro.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Apercu-Bold';
-  src: url('/assets/fonts/Apercu-Bold/Apercu-Bold.eot');
-  src: url('/assets/fonts/Apercu-Bold/Apercu-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Apercu-Bold/Apercu-Bold.woff') format('woff'),
-      url('/assets/fonts/Apercu-Bold/Apercu-Bold.ttf')  format('truetype'),
-      url('/assets/fonts/Apercu-Bold/Apercu-Bold.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -48,6 +15,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: $TradeGothic;
+		overflow-x: hidden;
 }
 
 li, a {
@@ -57,8 +25,23 @@ li, a {
     text-transform: none;
     list-style: none;
 }
+
 a:focus {
     color: #000000;
     font-weight: 700;
     transition: .2s linear;
+}
+
+.section--text {
+	font-family: $Apercu;
+  margin: 0 auto;
+  max-width: 1200px;
+	padding: 30px;
+
+	@include media-above($phone) {
+		padding: 50px;
+	}
+	@include media-above($large) {
+		padding: 120px;
+	}
 }

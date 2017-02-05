@@ -1,37 +1,21 @@
 ---
 layout: default
 ---
-  <!--    >>>>>>>>>>>navigation<<<<<<-->
-
-  <div class="title">book of fragment</div>
-  <div class="section">Editorial</div>
-
-  <a href="book-fragment.html"><div class="img3"></div></a>
-
-  <div class="title2">massin-faucheux</div>
-  <div class="section2">Editorial</div>
-
-
-  <a href="massin-faucheux.html"><div class="img4"></div></a>
-
-  <div class="title3">[re]titled</div>
-  <div class="section3">Editorial</div>
-
-
-  <a href="re.html"><div class="img5"></div></a>
-
-  <div class="title4">paperback</div>
-  <div class="section4">Editorial</div>
-
-
-  <a href="paperback.html"><div class="img6"></div></a>
-
-  <div class="title5">livro de areia</div>
-  <div class="section5">Editorial</div>
-
-  <a href="livro-areia.html"><div class="img7"></div></a>
-
-  <div class="title6">strong</div>
-  <div class="section6">Editorial</div>
-
-  <a href="strong.html"><div class="img8"></div></a>
+<section class="category">
+  {% for post in site.categories.editorial %}
+    <article class="category__project{% cycle '', ' right' %}">
+      <div class="category__project__title">
+        <h2>
+          {{ post.title }}
+        </h2>
+        <p>{{ post.categories }}</p>
+      </div>
+      <a href="{{ post.url }}">
+        <div class="category__project__image"
+             style="background-image: url({{ post.images.thumbnailHover}})">
+          <img src="{{ post.images.thumbnail}}" alt="{{ post.title }}"/>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</section>

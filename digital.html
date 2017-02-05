@@ -1,3 +1,21 @@
 ---
 layout: default
 ---
+<section class="category">
+  {% for post in site.categories.digital %}
+    <article class="category__project{% cycle '', ' right' %}">
+      <div class="category__project__title">
+        <h2>
+          {{ post.title }}
+        </h2>
+        <p>{{ post.categories }}</p>
+      </div>
+      <a href="{{ post.url }}">
+        <div class="category__project__image"
+             style="background-image: url({{ post.images.thumbnailHover}})">
+          <img src="{{ post.images.thumbnail}}" alt="{{ post.title }}"/>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</section>
