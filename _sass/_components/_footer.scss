@@ -1,0 +1,56 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 70px;
+  width: 70%;
+
+  @include media-above($tablet) {
+    width: 33%;
+  }
+  @include media-above($large) {
+    width: 15%;
+  }
+
+  > * {
+    $size: 30px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: $size;
+    margin-right: $size;
+    width: $size;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__behance {
+    background-image: url('/assets/img/behance_color.png');
+    &:hover {
+      background-image: url('/assets/img/behance_black.svg');
+    }
+  }
+
+  &__insta {
+    background-image: url('/assets/img/insta_color.png');
+    &:hover {
+      background-image: url('/assets/img/insta_black.svg');
+    }
+  }
+
+  &__linked {
+    background-image: url('/assets/img/linked_color.png');
+    &:hover {
+      background-image: url('/assets/img/linked_black.svg');
+    }
+  }
+
+  &__vimeo {
+    background-image: url('/assets/img/vimeo_color.png');
+    &:hover {
+      background-image: url('/assets/img/vimeo_black.png');
+    }
+  }
+}

@@ -1,0 +1,151 @@
+// THIS ALLOWS THE IMAGES TO BE LOADED BEFOREHAND
+.workspace__prefetch::after {
+  background: url('/assets/img/workspace/drawing-base.svg'),
+              url('/assets/img/workspace/digital.svg'),
+              url('/assets/img/workspace/illustration.svg'),
+              url('/assets/img/workspace/editorial.svg'),
+              url('/assets/img/workspace/photo.svg'),
+              url('/assets/img/workspace/misc.svg');
+  content: '';
+  height: 0;
+  width: 0;
+}
+
+// STYLES -------
+.workspace {
+  // 100px = footer's height
+  box-sizing: border-box;
+  height: calc(100vh - 100px);
+  padding-top: 4em;
+  position: relative;
+  width: 100%;
+
+  @include media-above($tablet) {
+    padding: 4em 4em 0;
+  }
+
+  &__background {
+    background-image: url('/assets/img/workspace/drawing-base.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 70px);
+    left: 0;
+    opacity: 0.33;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include media-above($tablet) {
+      opacity: 1;
+    }
+  }
+
+  // ---- LINKS
+  a {
+    display: block;
+    margin-top: 2em;
+    position: relative;
+    text-align: center;
+
+    @include media-above($tablet) {
+      display: inline-block;
+      position: absolute;
+      margin: 0;
+    }
+  }
+
+  &__editorial {
+    @include media-above($tablet) {
+      top: 30%;
+      height: 30%;
+      width: 35%;
+    }
+    @include media-above($desktop) {
+      left: 10%;
+    }
+    &:hover, &:focus {
+      color: $red;
+      ~ .workspace__background {
+        background-image: url('/assets/img/workspace/editorial.svg');
+      }
+    }
+  }
+
+  &__misc {
+    @include media-above($tablet) {
+      bottom: 25%;
+      left: 40%;
+      padding-top: 25%;
+      padding-right: 10%;
+    }
+    @include media-above($desktop) {
+      padding-top: 15%;
+    }
+
+    &:hover, &:focus {
+      color: $red;
+      ~ .workspace__background {
+        background-image: url('/assets/img/workspace/misc.svg');
+      }
+    }
+  }
+
+  &__digital {
+    @include media-above($tablet) {
+      height: 35%;
+      left: 39%;
+      top: 18%;
+      width: 25%;
+    }
+    @include media-above($desktop) {
+      top: 10%;
+    }
+    &:hover, &:focus {
+      color: $red;
+      ~ .workspace__background {
+        background-image: url('/assets/img/workspace/digital.svg');
+      }
+    }
+  }
+
+  &__photo {
+    @include media-above($tablet) {
+      bottom: 10%;
+      padding: 12% 25% 20% 0;
+      right: 10%;
+    }
+    @include media-above($desktop) {
+      bottom: 0;
+      padding: 15% 30% 20% 0;
+      right: 0;
+    }
+    @include media-above($large) {
+      padding: 15% 37% 14% 0;
+    }
+
+    &:hover, &:focus {
+      color: $red;
+      ~ .workspace__background {
+        background-image: url('/assets/img/workspace/photo.svg');
+      }
+    }
+  }
+
+  &__illustration {
+    @include media-above($tablet) {
+      right: 12%;
+      top: 30%;
+      width: 25%;
+      height: 20%;
+    }
+
+    &:hover, &:focus {
+      color: $red;
+      ~ .workspace__background {
+        background-image: url('/assets/img/workspace/illustration.svg');
+      }
+    }
+  }
+}

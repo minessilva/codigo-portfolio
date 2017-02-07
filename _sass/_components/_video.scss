@@ -1,0 +1,33 @@
+.video-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+
+  video {
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__slider {
+      $size: 36px;
+      
+      animation: slider 2s infinite;
+      border: 3px solid #ffffff;
+      border-width: 0 0 3px 3px;
+      bottom: 7.5vh;
+      position: absolute;
+      height: $size;
+      left: 50%;
+      margin-left: -12px;
+      transform: rotate(-45deg);
+      width: $size;
+      z-index: 1;
+  }
+}

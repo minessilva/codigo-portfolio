@@ -1,0 +1,149 @@
+// --- image layouts ----
+%img-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-full {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.img-center {
+  width: 80%;
+  margin: 0 10% 10%;
+}
+
+.panorama {
+  margin-bottom: 10%;
+}
+
+.img-three {
+  @extend .img-center;
+  height: 600px;
+  height: 60vh;
+  clear: both;
+
+  &__col {
+    @extend %img-background;
+    float: left;
+    height: 600px;
+    height: 60vh;
+    margin-right: 1rem;
+    width: calc(50% - 0.5rem);
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__col__row {
+    @extend %img-background;
+    height: calc(300px - 1rem);
+    height: calc(30vh - 0.5rem);
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.img-two {
+  @extend .img-center;
+  clear: both;
+
+  &__col {
+    @extend %img-background;
+    display: inline-block;
+    padding-bottom: 60%;
+    margin: 10% 15% 0 7.5%;
+    width: 34%;
+
+    &:last-of-type {
+      margin: 0 7.5% 10% 0;
+    }
+  }
+}
+
+
+// --- PROJECT LAYOUT ---
+.project__lead {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  height: 100vh;
+}
+
+.project {
+  @extend .section--text;
+  $margin-top-header: 2rem;
+
+  &__sideImg {
+    img {
+      display: none;
+      margin: $margin-top-header+2.5rem 0;
+      width: 100%;
+      @include media-above($tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: $margin-top-header - 0.75rem;
+    }
+
+    h2 {
+      padding-top: $margin-top-header;
+    }
+
+    .project__description {
+      margin-top: 2rem;
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__navigation {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 0 6rem;
+
+    a {
+      font-family: $TradeGothic;
+      font-size: 1.25rem;
+      border-bottom: 2px solid transparent;
+
+      &:hover, &:focus {
+        border-bottom: 2px solid $black;
+      }
+    }
+    .right {
+      float: right;
+    }
+  }
+
+  .project__credits {
+    display: block;
+    margin: 0 auto 2rem;
+    width: 80%;
+    @include media-above($tablet) {
+      width: 50%;
+    }
+
+    h3 {
+      border-top: 3px solid $black;
+      display: inline-block;
+      padding-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

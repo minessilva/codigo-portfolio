@@ -1,0 +1,20 @@
+// ---- COLORS
+$black: #000;
+$white: #fff;
+$red: #f04319;
+
+// ----  FONTS
+$Apercu: 'Apercu-Bold', sans-serif;
+$TradeGothic: 'TradeGothicLT-Bold', sans-serif;
+
+// ---- MEDIA QUERIES
+$phone: 480px;
+$tablet: 768px;
+$desktop: 992px;
+$large: 1200px;
+
+@mixin media-above($size) {
+  @media all and (min-width: $size) {
+    @content;
+  }
+}

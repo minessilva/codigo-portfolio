@@ -1,0 +1,110 @@
+/*<<<<<<<<navigation<<<<*/
+.about {
+  @extend .section--text;
+
+  // TITLES --------------------------------
+  h2 {   // .about h2
+    font-family: $TradeGothic;
+    font-size: 20px;
+    padding-top: 15px;
+    position: relative;
+    margin: 40px 0;
+
+    &::before { // .about h2::before
+      background-color: $black;
+      content: '';
+      display: inline-block;
+      height: 3px;
+      position: absolute;
+      top: 0;
+      width: 2rem;
+    }
+
+    &.about__name { // .about h2.about__name
+      display: inline-block;
+      &::before {
+        bottom: -0.25rem;
+        right: -1rem;
+        top: auto;
+      }
+    }
+
+    &.about__title--adjust {
+      margin-top: 0;
+    }
+  }
+
+  // SPECIFICS -------------------
+  &__gif {  // .about__gif
+    display: block;
+    margin: 75px -12.5%;
+    width: 125%;
+    @include media-above($tablet) {
+      margin: 100px auto;
+      width: 80%;
+    }
+    @include media-above($large) {
+      margin: 100px auto;
+      width: 70%;
+    }
+  }
+
+  &__first-paragraph {
+    padding-top: 2.5rem;
+  }
+
+  li, dd {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    &::before {
+      content: "- "
+    }
+  }
+
+  a {  // .about a
+    border-bottom: 2px solid $black;
+    &:hover, &:focus {
+      border-bottom: none;
+    }
+  }
+}
+
+// ----
+.about__skills {
+  img {
+    height: 3rem;
+    margin: 0 0.5rem 0.5rem 0;
+    &:least-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.about__clients {
+  img {
+    height: 3rem;
+    margin: 0 2rem 2rem 0;
+    &:least-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.about__languages {
+  clear: both;
+  display: table;
+
+  &__item {
+    border-top: 2px solid $black;
+    float: left;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    text-align: center;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}

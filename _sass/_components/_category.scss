@@ -1,0 +1,51 @@
+.category {
+  @extend .section--text;
+  overflow: hidden;
+
+  &__project {
+    clear: both;
+    position: relative;
+    margin: 0 0 6rem;
+    width: 80%;
+    @include media-above($tablet) {
+      width: 60%;
+      margin: 0 0 4rem;
+    }
+
+    &__title {
+      position: absolute;
+      left: 25%;
+      top: 70%;
+      width: 100%;
+      z-index: 1;
+      @include media-above($tablet) {
+        left: 90%;
+        top: 50%;
+      }
+    }
+
+    &__image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        width: 100%;
+        &:hover, &:focus {
+          opacity: 0;
+        }
+      }
+    }
+
+    &.right {
+      float: right;
+
+      .category__project__title {
+        left: -25%;
+        @include media-above($tablet) {
+          left: -20%;
+        }
+      }
+    }
+  }
+}
