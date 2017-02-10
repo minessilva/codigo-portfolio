@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% if page.images.mainImg != null || '' %}
+{% if page.images.mainImg != nil | '' %}
   <!-- if there's a mainImg --->
   <section id="video" class="project__lead" style="background-image: url({{ page.images.mainImg}})">
   </section>
@@ -10,7 +10,7 @@ layout: default
 <section class="project">
   <div class="grid">
     <div class="col-1-2 project__sideImg">
-      {% if page.images.sideImg != null || '' %}
+      {% if page.images.sideImg != nil | '' %}
         <!-- if there's a sideImg --->
         <img src="{{ page.images.sideImg }}" alt="{{ page.title }}">
       {% endif %}
@@ -49,7 +49,7 @@ layout: default
     {% endif %}
   </div>
 
-  {% if page.credits != nil || '' %}
+  {% if page.credits != nil | '' %}
     <div class="project__credits">
       <h3>CREDITS</h2>
 

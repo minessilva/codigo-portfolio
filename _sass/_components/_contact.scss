@@ -1,54 +1,38 @@
 /*<<<<<<<<HEADER<<<<*/
 
- .contact {
-        width: 50%;
-        height: 60%;
-        background-image: url(/assets/img/contact_1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        position: absolute;
-        margin-left: 25%;
-        padding: 5px;
-        margin-top: 150px;
-    }
+.contact {
+	@extend .section--text;
+	height: 100vh;
+}
+
+.contact__img {
+	width: 50%;
+	height: 60%;
+	background-image: url(/assets/img/contact_1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 
 .contact__nome {
-    color: #000000;
-    padding: 16px;
-    font-size: 20px;
-    font-family: 'Apercu-Bold';
-    border: none;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
+	font-family: 'Apercu-Bold';
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform-origin: 0 0;
+    display: inline-block;
     position: absolute;
-    width:180px;
-    margin-left: 10%;
-    margin-top: 350px;
-
+    bottom: 0;
 }
 
-.contact__traco {
-  margin-top: 5px;
-  position: absolute;
+.contact__email {
+	font-size: 20px;
+	font-family: 'Apercu-Bold';
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
-.email {
-    color: #000000;
-    padding: 16px;
-    font-size: 20px;
-    font-family: 'Apercu-Bold';
-    border: none;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    position: absolute;
-    width:180px;
-    margin-left: 10%;
-    margin-top: 780px;
 
-}
