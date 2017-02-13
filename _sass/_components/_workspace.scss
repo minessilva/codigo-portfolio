@@ -24,6 +24,14 @@
     padding: 4em 4em 0;
   }
 
+  > * {
+    position: relative;
+    top: 4rem;
+    @include media-above($tablet) {
+      top: auto;
+    }
+  }
+
   &__background {
     background-image: url('/assets/img/workspace/drawing-base.svg');
     background-size: contain;

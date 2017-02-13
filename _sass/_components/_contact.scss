@@ -2,15 +2,21 @@
 
 .contact {
 	@extend .section--text;
-	height: 100vh;
+	height: 90vh;
 }
 
 .contact__img {
-	width: 50%;
-	height: 60%;
-	background-image: url(/assets/img/contact_1.jpg);
+	background-image: url('/assets/img/contact_1.jpg');
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	width: 80%;
+	@include media-above($tablet) {
+		width: 50%;
+	}
 }
 
 .contact__nome {
@@ -20,19 +26,44 @@
 	-ms-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
 	transform-origin: 0 0;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+	left: -3rem;
+	font-size: 24px;
+	@include media-above($tablet) {
+		left: -6rem;
+		bottom: -2rem;
+	}
+
+	&::before {
+		background-color: $black;
+		content: '';
+		display: inline-block;
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		right: -0.75rem;
+		width: 1.5rem;
+	}
 }
 
 .contact__email {
-	font-size: 20px;
+	display: inline-block;
 	font-family: 'Apercu-Bold';
+	font-size: 20px;
+	position: absolute;
+	top: 15vh;
+	left: calc(100% + 3rem);
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	-o-transform: rotate(90deg);
 	transform: rotate(90deg);
+	transform-origin: 0 0;
+
+	@include media-above($tablet) {
+		left: calc(100% + 6rem);
+		top: 5vh;
+	}
 }
-
-
